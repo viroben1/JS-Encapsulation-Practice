@@ -54,7 +54,7 @@ function createSandwichCard(sandwich) {
 }
 
 // We'll use this function anytime we need to change the selected sandwich
-function selectSandwich(sandwich) {
+ selectSandwich:function (sandwich) {
     selectedSandwich = sandwich
 
     const breadRadio = document.querySelector(`[value="${sandwich.bread}"]`)
@@ -64,7 +64,7 @@ function selectSandwich(sandwich) {
     nameInput.value = sandwich.name
 
     renderCart()
-    renderIngredientList()
+    ingredientList.render()
 }
 
 // We'll use this function to save the sandwich, either
